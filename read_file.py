@@ -14,12 +14,12 @@ def read_file(filename: str) -> list[int]:
 
     s=f.read()
     numbers= s.split(",")
-    ans=[]
-    for i in numbers:
-        ans.append(int(i))
+    i=0
+    while i < len(numbers):
+        numbers[i]=int(numbers[i])
+        i+=1
 
-
-    return ans 
+    return numbers 
 
 print(read_file("data.txt"))
 
