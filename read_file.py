@@ -10,6 +10,18 @@ def read_file(filename: str) -> list[int]:
     """
     # Open the file
     # Read the file
-    return 0 
+    f=open(filename,"r")
+
+    s=f.read()
+    numbers= s.split(",")
+    ans=[]
+    for i in numbers:
+        ans.append(int(i))
+
+
+    return ans 
+
+print(read_file("data.txt"))
 
 #Print list from file
+
